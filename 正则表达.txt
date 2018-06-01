@@ -1,0 +1,20 @@
+过滤下载文件中包含 the 关键字                grep "the" 123.txt
+过滤下载文件中不包含 the 关键字              grep -v "the" 123.txt
+过滤下载文件中不论大小写 the 关键字          grep -i"the" 123.txt
+过滤 test 或 taste 这两个单字               grep -n "t[ae]ste\{0,1}" 123.txt
+过滤有 oo 的字节                               grep "oo" 123.txt
+过滤丌想要 oo 前面有 g 的                     grep "[^g]oo"  123.txt
+过滤 oo 前面丌想有小写字节                    grep "[^a-z]oo" 123.txt 
+过滤有数字的那一行                              grep  "[0-9]" 123.txt
+过滤以 the 开头的                              grep  "^the"  123.txt
+过滤以小写字母开头的                            grep  "^[a-z]"  123.txt
+过滤开头丌是英文字母                            grep  "^[^a-Z]"  123.txt
+过滤行尾结束为小数点.那一行                     grep  "\.$"
+过滤空白行                                       grep  "^$"
+过滤出 g??d 的字串                              grep  "g..d" 
+过滤至少两个 o 以上的字串                       grep   "0\{2,\}"
+过滤g开头和g结尾但是两个g之间仅存在至少一个o  grep  "g\{1,\}g"
+过滤任意数字的行                                  grep  "[0-9]"
+过滤两个 o 的字串                                 grep  "o\{2,\}"
+过滤g后面接2到5个o,然后在接一个g的字串          grep  "go{2,5}g"
+过滤 g 后面接 2 个以上 o 的                      grep   "go{2,\}"
